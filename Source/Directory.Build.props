@@ -11,7 +11,7 @@
     <Authors>Stanislav Muhametsin</Authors>
     <Company></Company>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <Product>AsyncEnumeration</Product>
+    <Product>FluentCryptography</Product>
     <Copyright>Stanislav Muhametsin</Copyright>
     <AssemblyOriginatorKeyFilePath>$(MSBuildThisFileDirectory)\..\Keys\$(Product).snk</AssemblyOriginatorKeyFilePath>
     <PackageProjectUrl>https://github.com/stazz/$(Product)</PackageProjectUrl>
