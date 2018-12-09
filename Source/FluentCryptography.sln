@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentCryptography.Abstractions", "FluentCryptography.Abstractions\FluentCryptography.Abstractions.csproj", "{B43766FC-D5A7-47F5-9850-5416D030C010}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentCryptography.Abstractions", "Code\FluentCryptography.Abstractions\FluentCryptography.Abstractions.csproj", "{B43766FC-D5A7-47F5-9850-5416D030C010}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentCryptography.Digest", "FluentCryptography.Digest\FluentCryptography.Digest.csproj", "{03E5E288-4FAF-4E17-AC85-78A453462548}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentCryptography.Digest", "Code\FluentCryptography.Digest\FluentCryptography.Digest.csproj", "{03E5E288-4FAF-4E17-AC85-78A453462548}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentCryptography.SASL", "FluentCryptography.SASL\FluentCryptography.SASL.csproj", "{044EE615-9C5C-4FCE-96EC-416166CDF9E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentCryptography.SASL", "Code\FluentCryptography.SASL\FluentCryptography.SASL.csproj", "{044EE615-9C5C-4FCE-96EC-416166CDF9E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentCryptography.SASL.SCRAM", "FluentCryptography.SASL.SCRAM\FluentCryptography.SASL.SCRAM.csproj", "{78932453-5911-4404-844A-A28A97B8153A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentCryptography.SASL.SCRAM", "Code\FluentCryptography.SASL.SCRAM\FluentCryptography.SASL.SCRAM.csproj", "{78932453-5911-4404-844A-A28A97B8153A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.FluentCryptography.Digest", "Tests\Tests.FluentCryptography.Digest\Tests.FluentCryptography.Digest.csproj", "{BA506696-3096-4ADD-A518-CECB77A6CB0F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.FluentCryptography.SASL.SCRAM", "Tests\Tests.FluentCryptography.SASL.SCRAM\Tests.FluentCryptography.SASL.SCRAM.csproj", "{28F39702-87A1-4D4C-9E51-25BC4CC7196E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{78932453-5911-4404-844A-A28A97B8153A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78932453-5911-4404-844A-A28A97B8153A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78932453-5911-4404-844A-A28A97B8153A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA506696-3096-4ADD-A518-CECB77A6CB0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA506696-3096-4ADD-A518-CECB77A6CB0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA506696-3096-4ADD-A518-CECB77A6CB0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA506696-3096-4ADD-A518-CECB77A6CB0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F39702-87A1-4D4C-9E51-25BC4CC7196E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F39702-87A1-4D4C-9E51-25BC4CC7196E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F39702-87A1-4D4C-9E51-25BC4CC7196E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F39702-87A1-4D4C-9E51-25BC4CC7196E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

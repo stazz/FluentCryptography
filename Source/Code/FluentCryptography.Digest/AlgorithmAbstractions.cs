@@ -28,7 +28,7 @@ namespace FluentCryptography.Digest
 
    /// <summary>
    /// This interface provides API for all digest-producing cryptographic algorithms.
-   /// Typical usecase is to scan through data using <see cref="ProcessBlock"/> method, and finally produce a digest by <see cref="WriteDigest"/> method or <see cref="E_UtilPack.CreateDigest"/> extension method.
+   /// Typical usecase is to scan through data using <see cref="ProcessBlock"/> method, and finally produce a digest by <see cref="WriteDigest"/> method or <see cref="E_FluentCryptography.CreateDigest"/> extension method.
    /// </summary>
    public interface DigestAlgorithm : IDisposable
    {

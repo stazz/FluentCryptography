@@ -190,7 +190,7 @@ namespace FluentCryptography.Digest
    }
 }
 
-public static partial class E_UtilPack
+public static partial class E_FluentCryptography
 {
    /// <summary>
    /// Creates a new instance of <see cref="BlockDigestAlgorithm"/> which wraps this <see cref="BlockDigestAlgorithm"/>, and adds HMAC support.

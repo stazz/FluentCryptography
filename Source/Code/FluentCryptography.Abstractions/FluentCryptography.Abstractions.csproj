@@ -1,18 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.0;net40;net45</TargetFrameworks>
+    <TargetFrameworks>netstandard1.0;netstandard2.0;net40;net45</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <TreatSpecificWarningsAsErrors />
-     <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="UtilPack" Version="1.6.0" />
+    <PackageReference Include="UtilPack" Version="1.7.0" />
   </ItemGroup>
 
   <!-- Assembly information stuff -->
@@ -33,13 +32,5 @@
     <Title>Cryptographic Abstractions</Title>
   </PropertyGroup>
 
-  <!--
-  At least currently (9.5.2017) modifying VersionPrefix/VersionSuffix will cause the assemblyinfo.cs file to regenerate, but with old version strings (??).
-  So... manually delete the file first when building in release mode.
-  If we put BeforeTargets="Build", this will be executed *after* the target which generates the assembly info, so we must put the correct target in BeforeTargets attribute.
-  -->
-  <Target Name="DeleteAssemblyInfoFile" BeforeTargets="CoreGenerateAssemblyInfo">
-    <Delete Condition=" '$(Configuration)' == 'Release' " Files="$(IntermediateOutputPath)$(MSBuildProjectName).AssemblyInfo.cs" />
-  </Target>
-
+  <Import Project="$(CIPropsFilePath)" Condition=" '$(CIPropsFilePath)' != '' and Exists('$(CIPropsFilePath)') " />
 </Project>
