@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.0;netstandard2.0;net40;net45</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TreatSpecificWarningsAsErrors />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="UtilPack" Version="1.7.1" />
+  </ItemGroup>
+
+  <!-- Assembly information stuff -->
+  <PropertyGroup>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <VersionSuffix></VersionSuffix>
+    <AssemblyTitle>$(AssemblyName)</AssemblyTitle>
+    <Description>Library containing basic abstractions to cryptography. Aims to make it easy to use, while still allowing advanced scenarios like e.g. minimizing heap allocations, etc.</Description>
+  </PropertyGroup>
+
+  <!-- NuGet package stuff -->
+  <PropertyGroup>
+    <PackageId>$(AssemblyName)</PackageId>
+    <PackageVersion>$(VersionPrefix)</PackageVersion>
+    <PackageVersion Condition=" '$(VersionSuffix)' != ''">$(PackageVersion)-$(VersionSuffix)</PackageVersion>
+    <PackageReleaseNotes>Initial release, was previously part of UtilPack.Cryptography packages.</PackageReleaseNotes>
+    <PackageTags>utility cryptography random</PackageTags>
+    <Title>Fluent Cryptography: Abstractions</Title>
+  </PropertyGroup>
+
+  <Import Project="$(CIPropsFilePath)" Condition=" '$(CIPropsFilePath)' != '' and Exists('$(CIPropsFilePath)') " />
+</Project>
