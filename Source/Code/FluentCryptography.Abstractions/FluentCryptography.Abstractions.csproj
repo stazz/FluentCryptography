@@ -11,15 +11,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="UtilPack" Version="1.7.0" />
+    <PackageReference Include="UtilPack" Version="1.7.1" />
   </ItemGroup>
 
   <!-- Assembly information stuff -->
   <PropertyGroup>
-    <VersionPrefix>1.2.0</VersionPrefix>
+    <VersionPrefix>1.0.0</VersionPrefix>
     <VersionSuffix></VersionSuffix>
     <AssemblyTitle>$(AssemblyName)</AssemblyTitle>
-    <Description>Library containing basic abstractions to cryptography. Aims to fill the gap in cryptographic API lack in .NET Standard 1.0, and to co-operate with existing cryptographic API in other .NET frameworks.</Description>
+    <Description>Library containing basic abstractions to cryptography. Aims to make it easy to use, while still allowing advanced scenarios like e.g. minimizing heap allocations, etc.</Description>
   </PropertyGroup>
 
   <!-- NuGet package stuff -->
@@ -27,9 +27,9 @@
     <PackageId>$(AssemblyName)</PackageId>
     <PackageVersion>$(VersionPrefix)</PackageVersion>
     <PackageVersion Condition=" '$(VersionSuffix)' != ''">$(PackageVersion)-$(VersionSuffix)</PackageVersion>
-    <PackageReleaseNotes>Updating UtilPack version.</PackageReleaseNotes>
+    <PackageReleaseNotes>Initial release, was previously part of UtilPack.Cryptography packages.</PackageReleaseNotes>
     <PackageTags>utility cryptography random</PackageTags>
-    <Title>Cryptographic Abstractions</Title>
+    <Title>Fluent Cryptography: Abstractions</Title>
   </PropertyGroup>
 
   <Import Project="$(CIPropsFilePath)" Condition=" '$(CIPropsFilePath)' != '' and Exists('$(CIPropsFilePath)') " />

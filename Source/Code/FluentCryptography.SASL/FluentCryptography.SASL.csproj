@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard1.0;netstandard2.0;net40;net45</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -11,7 +12,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="UtilPack" Version="1.6.0" />
+    <PackageReference Include="UtilPack" Version="1.7.1" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45'">
@@ -32,9 +33,9 @@
     <PackageId>$(AssemblyName)</PackageId>
     <PackageVersion>$(VersionPrefix)</PackageVersion>
     <PackageVersion Condition=" '$(VersionSuffix)' != ''">$(PackageVersion)-$(VersionSuffix)</PackageVersion>
-    <PackageReleaseNotes>Updating to newer version of UtilPack.Cryptography.Digest. This introduces binary-incompatible change, resulting in major version number increase.</PackageReleaseNotes>
+    <PackageReleaseNotes>Initial release, was previously UtilPack.Cryptography.SASL.</PackageReleaseNotes>
     <PackageTags>utility cryptography sasl</PackageTags>
-    <Title>SASL Generic Library</Title>
+    <Title>FluentCryptography: SASL Abstractions</Title>
   </PropertyGroup>
 
   <Import Project="$(CIPropsFilePath)" Condition=" '$(CIPropsFilePath)' != '' and Exists('$(CIPropsFilePath)') " />

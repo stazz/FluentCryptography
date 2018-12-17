@@ -23,10 +23,10 @@
 
   <!-- Assembly information stuff -->
   <PropertyGroup>
-    <VersionPrefix>2.0.0</VersionPrefix>
+    <VersionPrefix>1.0.0</VersionPrefix>
     <VersionSuffix></VersionSuffix>
     <AssemblyTitle>$(AssemblyName)</AssemblyTitle>
-    <Description>Provides ability to create objects implementing SASLMechanism of UtilPack.Cryptograhy.SASL that handle the SCRAM mechanism of SASL. No strings are allocated during challenge. Both client-side and server-side mechanisms are provided.</Description>
+    <Description>Provides ability to create objects implementing SASLMechanism of FluentCryptography.SASL. These objects handle the SCRAM mechanism of SASL. No strings are allocated during challenge. Both client-side and server-side mechanisms are provided.</Description>
   </PropertyGroup>
 
   <!-- NuGet package stuff -->
@@ -34,9 +34,9 @@
     <PackageId>$(AssemblyName)</PackageId>
     <PackageVersion>$(VersionPrefix)</PackageVersion>
     <PackageVersion Condition=" '$(VersionSuffix)' != ''">$(PackageVersion)-$(VersionSuffix)</PackageVersion>
-    <PackageReleaseNotes>Updating to newer version of UtilPack.Cryptography.Digest. This introduces binary-incompatible change, resulting in major version number increase.</PackageReleaseNotes>
+    <PackageReleaseNotes>Initial release, was previously UtilPack.Cryptography.SASL.SCRAM.</PackageReleaseNotes>
     <PackageTags>utility cryptography sasl scram sha-128 sha-256 sha-512 digest hash</PackageTags>
-    <Title>SASL SCRAM Library</Title>
+    <Title>FluentCryptography: SASL SCRAM Implementations</Title>
   </PropertyGroup>
 
   <Import Project="$(CIPropsFilePath)" Condition=" '$(CIPropsFilePath)' != '' and Exists('$(CIPropsFilePath)') " />
