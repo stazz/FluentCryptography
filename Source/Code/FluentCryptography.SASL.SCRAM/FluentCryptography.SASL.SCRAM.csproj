@@ -5,12 +5,6 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
-    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
-    <TreatSpecificWarningsAsErrors />
-  </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\FluentCryptography.Digest\FluentCryptography.Digest.csproj" />
     <ProjectReference Include="..\FluentCryptography.SASL\FluentCryptography.SASL.csproj" />
